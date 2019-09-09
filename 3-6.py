@@ -28,8 +28,8 @@ with open('dataset_24476_3.txt', 'r') as f, open('output_3-6.txt', 'w') as fout:
     for line in f:
         api_url = template.format(line.strip())
         res = requests.get(api_url)
-        # print(res.json())
-        data = res.json()
+        print(res.json()) #commit edit test
+        data = res.json() #additing comment, test 1, test 2, test 3 for git diff
         # print(data['found'])
         if data['found'] is True:
             print('Interesting')
